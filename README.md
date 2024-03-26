@@ -16,6 +16,7 @@ Aprenderás cómo utilizar la función "Append Queries" para fusionar los datos 
 **4. Manejo de Discrepancias:** Identificar y resolver discrepancias en los datos, como valores nulos o duplicados, para obtener una tabla limpia y coherente.
 
 Resultado: 
+
 ![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/ed6e40e2-27cb-4ddb-97e2-b19ef3b6ab96)
 
 
