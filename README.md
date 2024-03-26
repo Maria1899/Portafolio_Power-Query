@@ -8,7 +8,7 @@ Aprenderás cómo utilizar la función "Append Queries" para fusionar los datos 
 **Pasos realizados:** 
 **1. Importación de Datos:** Importar dos conjuntos de datos separados que contienen información relevante para tu análisis.
 
-<img src="![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/158c2b1d-21c6-48aa-b761-0b30ab1a3003) " width="200">
+<img src=![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/158c2b1d-21c6-48aa-b761-0b30ab1a3003) width="200">
 
 
 ![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/875b1f1a-d62a-43c5-bb65-58adfab6e4ad)
