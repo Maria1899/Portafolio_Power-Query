@@ -22,6 +22,7 @@ Aprenderás cómo utilizar la función *"Append Queries"* para fusionar los dato
  **[Detalle de cada paso realizado](https://github.com/Maria1899/Portafolio_Power-Query/blob/main/01_Append%20Data%20with%20Different%20Column%20Headers/Solucion%20del%20desaf%C3%ADo.pdf)**
 
 **Código **
+
 **TB_JP**
 ```
 let
@@ -47,7 +48,9 @@ in
 
 Este proyecto se centra en la extracción eficiente de los clientes con las ventas máximas por semana. Destaca el uso de la función ```= Table.Max([column1],"valor")``` en Power Query para lograr este objetivo. Esta función es fundamental para identificar las ventas máximas en cada semana y extraer los clientes correspondientes, permitiendo un análisis detallado de los patrones de ventas y el rendimiento de los clientes a lo largo del tiempo.
 
-![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/fbd09b17-ddd0-49ca-98eb-711b8a80a670)
+| ![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/0f90da60-ed8e-4d38-97f7-5bb8281a4be5) | ![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/59570bed-25de-4b1e-b7f7-59fa200121e8)|
+|---|---|
+| **Origen Data** | **Resultado** |
 
 **Pasos realizados:**
 
@@ -68,11 +71,46 @@ Este proyecto se centra en la extracción eficiente de los clientes con las vent
 
  **[Detalle de cada paso realizado](https://github.com/Maria1899/Portafolio_Power-Query/blob/main/02_Extract%20Customers%20with%20max.%20Sales/Desaf%C3%ADoSoluci%C3%B3n.pdf)**
  
-**Resultado:**
-
-![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/59570bed-25de-4b1e-b7f7-59fa200121e8)
+**Código**
+```
+let
+    Source = Excel.CurrentWorkbook(){[Name="Data"]}[Content],
+    #"Otras columnas con anulación de dinamización" = Table.UnpivotOtherColumns(Source, {"Location", "Customer", "Customer Nr."}, "Atributo", "Valor"),
+    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Otras columnas con anulación de dinamización",{{"Atributo", "Cw"}}),
+    #"Filas agrupadas1" = Table.Group(#"Columnas con nombre cambiado", {"Location", "Cw"}, {{"Recuento", each _, type table [Location=text, Customer=text, #"Customer Nr."=text, Cw=text, Valor=number]}}),
+    #"Personalizada agregada" = Table.AddColumn(#"Filas agrupadas1", "Personalizado", each Table.Max([Recuento],"Valor")),
+    #"Columnas quitadas" = Table.RemoveColumns(#"Personalizada agregada",{"Location", "Cw", "Recuento"}),
+    #"Se expandió Personalizado" = Table.ExpandRecordColumn(#"Columnas quitadas", "Personalizado", {"Location", "Customer", "Cw"}, {"Personalizado.Location", "Personalizado.Customer", "Personalizado.Cw"}),
+    #"Columna dinamizada" = Table.Pivot(#"Se expandió Personalizado", List.Distinct(#"Se expandió Personalizado"[Personalizado.Location]), "Personalizado.Location", "Personalizado.Customer"),
+    #"Columnas con nombre cambiado1" = Table.RenameColumns(#"Columna dinamizada",{{"Personalizado.Cw", "Cw"}})
+in
+    #"Columnas con nombre cambiado1"
+```
 
 ## Carpeta 03: Transformación Dinámica de Bonificaciones para Empleados
 
 Este desafío de Power Query se centra en el cálculo dinámico de bonificaciones para empleados en una tienda, donde destaco mi habilidad para manejar funciones avanzadas como ```try Date.From() otherwise null``` y ```try Number.From() otherwise null```. Estas funciones me permiten garantizar la precisión y seguridad de los cálculos, incluso *en casos donde los datos tienen formatos irregulares.*"
 
+| ![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/0e86fa9c-d074-4f5f-86be-e577fa14e9d3) | ![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/876d719a-f24a-43df-b082-4ff3f5fd4b65)|
+|---|---|
+| **Origen Data** | **Resultado** |
+
+**Código**
+
+```
+let
+    Source = Excel.CurrentWorkbook(){[Name="Data"]}[Content],
+    #"Personalizada agregada" = Table.AddColumn(Source, "Fecha", each try Date.From([Columna1]) otherwise null),
+    #"Columna condicional agregada" = Table.AddColumn(#"Personalizada agregada", "Categoria", each if [Columna1] = "Category" then [Columna2] else null),
+    #"Rellenar hacia abajo" = Table.FillDown(#"Columna condicional agregada",{"Fecha", "Categoria"}),
+    #"Filas filtradas" = Table.SelectRows(#"Rellenar hacia abajo", each [Columna1] <> "Category" and [Columna1] <> "Employee" and [Columna2] <> null),
+    #"Otras columnas con anulación de dinamización" = Table.UnpivotOtherColumns(#"Filas filtradas", {"Fecha", "Categoria"}, "Atributo", "Valor"),
+    #"Columnas quitadas" = Table.RemoveColumns(#"Otras columnas con anulación de dinamización",{"Atributo"}),
+    #"Personalizada agregada1" = Table.AddColumn(#"Columnas quitadas", "Bonus", each try Number.From([Valor]) otherwise null),
+    #"Rellenar hacia arriba" = Table.FillUp(#"Personalizada agregada1",{"Bonus"}),
+    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Rellenar hacia arriba",{{"Valor", "Empleado"}}),
+    #"Filas alternas quitadas" = Table.AlternateRows(#"Columnas con nombre cambiado",1,1,1),
+    #"Tipo cambiado" = Table.TransformColumnTypes(#"Filas alternas quitadas",{{"Fecha", type date}, {"Categoria", type text}, {"Empleado", type text}, {"Bonus", Int64.Type}})
+in
+    #"Tipo cambiado"
+```
