@@ -34,6 +34,9 @@ Aprenderás cómo utilizar la función *"Append Queries"* para fusionar los dato
   </tr>
 </table>
 
+| ![Descripción de la imagen 1]![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/03966d55-4225-409d-b5a2-8ba10d4c8a63)  | ![Descripción de la imagen 2](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/88affcd3-a9db-4bfe-b5e6-287888ac4090) |
+|---|---|
+| **Imagen 1** | **Imagen 2** |
 
 ## Carpeta 02: Extraer clientes con ventas máximas por semana
 
