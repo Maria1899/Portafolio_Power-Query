@@ -23,7 +23,7 @@ Aprenderás cómo utilizar la función "Append Queries" para fusionar los datos 
 
 ![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/88affcd3-a9db-4bfe-b5e6-287888ac4090)
 
-## Carpeta 02: Extraer clientes con ventas máximas
+## Carpeta 02: Extraer clientes con ventas máximas por semana
 Se pide obtener una tabla dinamica que sea independiente de la columna locación y la cantidad de semanas.
 
 ![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/fbd09b17-ddd0-49ca-98eb-711b8a80a670)
