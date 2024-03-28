@@ -44,7 +44,7 @@ Se pide obtener una tabla dinamica que sea independiente de la columna locación
 
 **7. Columna Dinamizada:** Para convertir los valores únicos de "Location" en nuevas columnas.
 
- **[Detalle de cada paso realizado](https://github.com/Maria1899/Portafolio_Power-Query/blob/main/01_Append%20Data%20with%20Different%20Column%20Headers/Solucion%20del%20desaf%C3%ADo.pdf)**
+ **[Detalle de cada paso realizado](https://github.com/Maria1899/Portafolio_Power-Query/blob/main/02_Extract%20Customers%20with%20max.%20Sales/Desaf%C3%ADoSoluci%C3%B3n.pdf)**
  
 **Resultado:**
 
