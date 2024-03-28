@@ -5,6 +5,11 @@ Colección de desafíos que cubren diferentes **tareas básicas de limpieza de d
 Este ejercicio de Power Query se enfoca en combinar dos tablas con encabezados de columna diferentes en una sola tabla coherente.
 Aprenderás cómo utilizar la función *"Append Queries"* para fusionar los datos de ambas tablas y resolver cualquier discrepancia en los encabezados de columna.
 
+| ![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/f28a2c50-c942-4b9b-a45f-976795c20993)
+![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/03966d55-4225-409d-b5a2-8ba10d4c8a63)  | ![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/88affcd3-a9db-4bfe-b5e6-287888ac4090) |
+|---|---|
+| **Origen Data** | **Resultado** |
+
 **Pasos realizados:**
 
 **1. Importación de Datos:** Importar dos conjuntos de datos separados que contienen información relevante para tu análisis.
@@ -17,11 +22,27 @@ Aprenderás cómo utilizar la función *"Append Queries"* para fusionar los dato
 
  **[Detalle de cada paso realizado](https://github.com/Maria1899/Portafolio_Power-Query/blob/main/01_Append%20Data%20with%20Different%20Column%20Headers/Solucion%20del%20desaf%C3%ADo.pdf)**
 
-**Resultado:**
-
-| ![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/03966d55-4225-409d-b5a2-8ba10d4c8a63)  | ![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/88affcd3-a9db-4bfe-b5e6-287888ac4090) |
-|---|---|
-| **Origen Data** | **Resultado** |
+**Código **
+**TB_JP**
+```
+let
+    Source = Excel.CurrentWorkbook(){[Name="JP"]}[Content],
+    #"Encabezados con nivel disminuido" = Table.DemoteHeaders(Source),
+    #"Filas superiores quitadas" = Table.Skip(#"Encabezados con nivel disminuido",1)
+in
+    #"Filas superiores quitadas"
+```
+**TB_DATA**
+```
+let
+    Source = Excel.CurrentWorkbook(){[Name="Data"]}[Content],
+    #"Encabezados con nivel disminuido" = Table.DemoteHeaders(Source),
+    #"Consulta anexada" = Table.Combine({#"Encabezados con nivel disminuido", JP}),
+    #"Encabezados promovidos" = Table.PromoteHeaders(#"Consulta anexada", [PromoteAllScalars=true]),
+    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Location", type text}, {"Customer", type text}, {"Customer Nr.", type text}, {"cw01", Int64.Type}, {"cw02", Int64.Type}, {"cw03", Int64.Type}, {"cw04", Int64.Type}, {"cw05", Int64.Type}, {"cw06", Int64.Type}, {"cw07", Int64.Type}, {"cw08", Int64.Type}, {"cw09", Int64.Type}, {"cw10", Int64.Type}, {"cw11", Int64.Type}, {"cw12", Int64.Type}, {"cw13", Int64.Type}, {"cw14", Int64.Type}, {"cw15", Int64.Type}, {"cw16", Int64.Type}, {"cw17", Int64.Type}, {"cw18", Int64.Type}, {"cw19", Int64.Type}, {"cw20", Int64.Type}, {"cw21", Int64.Type}, {"cw22", Int64.Type}, {"cw23", Int64.Type}, {"cw24", Int64.Type}, {"cw25", Int64.Type}, {"cw26", Int64.Type}, {"cw27", Int64.Type}, {"cw28", Int64.Type}, {"cw29", Int64.Type}, {"cw30", Int64.Type}, {"cw31", Int64.Type}, {"cw32", Int64.Type}, {"cw33", Int64.Type}, {"cw34", Int64.Type}, {"cw35", Int64.Type}, {"cw36", Int64.Type}, {"cw37", Int64.Type}, {"cw38", Int64.Type}, {"cw39", Int64.Type}, {"cw40", Int64.Type}, {"cw41", Int64.Type}, {"cw42", Int64.Type}, {"cw43", Int64.Type}, {"cw44", Int64.Type}, {"cw45", Int64.Type}, {"cw46", Int64.Type}, {"cw47", Int64.Type}, {"cw48", Int64.Type}, {"cw49", Int64.Type}, {"cw50", Int64.Type}, {"cw51", Int64.Type}, {"cw52", Int64.Type}})
+in
+    #"Tipo cambiado"
+```
 
 ## Carpeta 02: Extraer clientes con ventas máximas por semana
 
@@ -36,6 +57,7 @@ Este proyecto se centra en la extracción eficiente de los clientes con las vent
 **2. Cambio de Nombre de Columnas:** Se renombra la columna resultante como "Cw".
 
 **3. Agrupación de Filas:** Se agrupan las filas por ubicación y "Cw", creando una nueva columna de tipo tabla que contiene los registros agrupados.
+
 
 **4. Agregación Personalizada:** Se agrega una columna personalizada que contiene el máximo valor de cada grupo en función de la columna "Valor".
 
