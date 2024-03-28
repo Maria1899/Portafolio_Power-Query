@@ -9,8 +9,6 @@ Aprenderás cómo utilizar la función *"Append Queries"* para fusionar los dato
 
 **1. Importación de Datos:** Importar dos conjuntos de datos separados que contienen información relevante para tu análisis.
 
-![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/03966d55-4225-409d-b5a2-8ba10d4c8a63)
-
 **2. Estandarización de Encabezados:** Renombrar los encabezados de columna según una convención común para garantizar la coherencia entre las tablas.
 
 **3. Combinación de Datos:** Utilizar la función "Append Queries" para fusionar los datos de ambas tablas en una sola tabla.
@@ -21,22 +19,9 @@ Aprenderás cómo utilizar la función *"Append Queries"* para fusionar los dato
 
 **Resultado:**
 
-![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/88affcd3-a9db-4bfe-b5e6-287888ac4090)
-
-<table>
-  <tr>
-    <td><img src=![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/03966d55-4225-409d-b5a2-8ba10d4c8a63) alt="Descripción de la imagen 1" width="400"></td>
-    <td><img src="![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/88affcd3-a9db-4bfe-b5e6-287888ac4090)" alt="Descripción de la imagen 2" width="400"></td>
-  </tr>
-  <tr>
-    <td align="center"><b>Imagen 1</b></td>
-    <td align="center"><b>Imagen 2</b></td>
-  </tr>
-</table>
-
-| ![Descripción de la imagen 1]![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/03966d55-4225-409d-b5a2-8ba10d4c8a63)  | ![Descripción de la imagen 2](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/88affcd3-a9db-4bfe-b5e6-287888ac4090) |
+| ![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/03966d55-4225-409d-b5a2-8ba10d4c8a63)  | ![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/88affcd3-a9db-4bfe-b5e6-287888ac4090) |
 |---|---|
-| **Imagen 1** | **Imagen 2** |
+| **Origen Data** | **Resultado** |
 
 ## Carpeta 02: Extraer clientes con ventas máximas por semana
 
