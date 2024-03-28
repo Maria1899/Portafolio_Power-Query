@@ -24,5 +24,20 @@ Aprenderás cómo utilizar la función "Append Queries" para fusionar los datos 
 
 ![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/758d003b-2aea-474d-9c9c-39dddbf5702e)
 
-## Carpeta 02
+## Carpeta 02: Extraer clientes con ventas máximas
+Se pide obtener una tabla dinamica que sea independiente de la columna locación y la cantidad de semanas.
+
+![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/fbd09b17-ddd0-49ca-98eb-711b8a80a670)![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/59570bed-25de-4b1e-b7f7-59fa200121e8)
+
+**1. Anulación de dinamización de Otras Columnas:** Para convertir varias columnas en filas, manteniendo algunas columnas específicas intactas.
+
+**2. Cambio de Nombre de Columnas:** Se renombra la columna resultante como "Cw".
+
+**3. Agrupación de Filas:** Se agrupan las filas por ubicación y "Cw", creando una nueva columna de tipo tabla que contiene los registros agrupados.
+
+**4. Agregación Personalizada:** Se agrega una columna personalizada que contiene el máximo valor de cada grupo en función de la columna "Valor".
+**5. Eliminación de Columnas:** Se eliminan las columnas innecesarias ("Location", "Cw", "Recuento"). 
+**6. Expansión de la Columna Personalizada:** Se expande la columna personalizada para obtener los valores de "Location" y "Customer" correspondientes al máximo valor de ventas.
+**7. Columna Dinamizada:** Para convertir los valores únicos de "Location" en nuevas columnas.
+
 
