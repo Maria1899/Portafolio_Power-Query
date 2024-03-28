@@ -3,7 +3,7 @@ Colección de desafíos que cubren diferentes **tareas básicas de limpieza de d
 
 ## Carpeta 01: Agregar datos con nombres de encabezados diferentes
 Este ejercicio de Power Query se enfoca en combinar dos tablas con encabezados de columna diferentes en una sola tabla coherente.
-Aprenderás cómo utilizar la función "Append Queries" para fusionar los datos de ambas tablas y resolver cualquier discrepancia en los encabezados de columna.
+Aprenderás cómo utilizar la función *"Append Queries"* para fusionar los datos de ambas tablas y resolver cualquier discrepancia en los encabezados de columna.
 
 **Pasos realizados:**
 
@@ -23,12 +23,25 @@ Aprenderás cómo utilizar la función "Append Queries" para fusionar los datos 
 
 ![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/88affcd3-a9db-4bfe-b5e6-287888ac4090)
 
+<table>
+  <tr>
+    <td><img src="![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/03966d55-4225-409d-b5a2-8ba10d4c8a63)" alt="Descripción de la imagen 1" width="400"></td>
+    <td><img src="![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/88affcd3-a9db-4bfe-b5e6-287888ac4090)" alt="Descripción de la imagen 2" width="400"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Imagen 1</b></td>
+    <td align="center"><b>Imagen 2</b></td>
+  </tr>
+</table>
 
 
 ## Carpeta 02: Extraer clientes con ventas máximas por semana
-Se pide obtener una tabla dinamica que sea independiente de la columna locación y la cantidad de semanas.
+
+Este proyecto se centra en la extracción eficiente de los clientes con las ventas máximas por semana. Destaca el uso de la función ```= Table.Max([column1],"valor")``` en Power Query para lograr este objetivo. Esta función es fundamental para identificar las ventas máximas en cada semana y extraer los clientes correspondientes, permitiendo un análisis detallado de los patrones de ventas y el rendimiento de los clientes a lo largo del tiempo.
 
 ![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/fbd09b17-ddd0-49ca-98eb-711b8a80a670)
+
+**Pasos realizados:**
 
 **1. Anulación de dinamización de Otras Columnas:** Para convertir varias columnas en filas, manteniendo algunas columnas específicas intactas.
 
