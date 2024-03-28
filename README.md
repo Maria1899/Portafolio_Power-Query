@@ -9,7 +9,7 @@ Aprenderás cómo utilizar la función "Append Queries" para fusionar los datos 
 
 **1. Importación de Datos:** Importar dos conjuntos de datos separados que contienen información relevante para tu análisis.
 
-![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/158c2b1d-21c6-48aa-b761-0b30ab1a3003) ![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/875b1f1a-d62a-43c5-bb65-58adfab6e4ad)
+![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/03966d55-4225-409d-b5a2-8ba10d4c8a63)
 
 **2. Estandarización de Encabezados:** Renombrar los encabezados de columna según una convención común para garantizar la coherencia entre las tablas.
 
@@ -21,12 +21,13 @@ Aprenderás cómo utilizar la función "Append Queries" para fusionar los datos 
 
 **Resultado:**
 
-![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/758d003b-2aea-474d-9c9c-39dddbf5702e)
+![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/88affcd3-a9db-4bfe-b5e6-287888ac4090)
 
 ## Carpeta 02: Extraer clientes con ventas máximas
 Se pide obtener una tabla dinamica que sea independiente de la columna locación y la cantidad de semanas.
 
 ![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/fbd09b17-ddd0-49ca-98eb-711b8a80a670)
+
 **1. Anulación de dinamización de Otras Columnas:** Para convertir varias columnas en filas, manteniendo algunas columnas específicas intactas.
 
 **2. Cambio de Nombre de Columnas:** Se renombra la columna resultante como "Cw".
