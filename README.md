@@ -5,8 +5,7 @@ Colección de desafíos que cubren diferentes **tareas básicas de limpieza de d
 Este ejercicio de Power Query se enfoca en combinar dos tablas con encabezados de columna diferentes en una sola tabla coherente.
 Aprenderás cómo utilizar la función *"Append Queries"* para fusionar los datos de ambas tablas y resolver cualquier discrepancia en los encabezados de columna.
 
-| ![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/f28a2c50-c942-4b9b-a45f-976795c20993)
-![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/03966d55-4225-409d-b5a2-8ba10d4c8a63)  | ![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/88affcd3-a9db-4bfe-b5e6-287888ac4090) |
+| ![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/f28a2c50-c942-4b9b-a45f-976795c20993)![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/03966d55-4225-409d-b5a2-8ba10d4c8a63)  | ![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/88affcd3-a9db-4bfe-b5e6-287888ac4090) |
 |---|---|
 | **Origen Data** | **Resultado** |
 
