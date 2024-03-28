@@ -50,3 +50,7 @@ Se pide obtener una tabla dinamica que sea independiente de la columna locación
 
 ![image](https://github.com/Maria1899/Portafolio_Power-Query/assets/103380005/59570bed-25de-4b1e-b7f7-59fa200121e8)
 
+## Carpeta 03: Transformación Dinámica de Bonificaciones para Empleados
+
+Este desafío de Power Query se centra en el cálculo dinámico de bonificaciones para empleados en una tienda, donde destaco mi habilidad para manejar funciones avanzadas como ```try Date.From() otherwise null``` y ```try Number.From() otherwise null```. Estas funciones me permiten garantizar la precisión y seguridad de los cálculos, incluso *en casos donde los datos tienen formatos irregulares.*"
+
